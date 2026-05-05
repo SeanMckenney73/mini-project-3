@@ -9,12 +9,12 @@ function AccountPage() {
   const { currentUser } = useUserContext();
   const [showRegister, setShowRegister] = useState(false);
 
-  // 1. If logged in, show the Update Profile component
+  
   if (currentUser?.id) {
     return <UpdateProfile />;
   }
 
-  // 2. If not logged in, toggle between Login and Register
+  
   return (
     <Container className="text-center mt-5">
       {showRegister ? <Register /> : <Login />}

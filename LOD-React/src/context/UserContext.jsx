@@ -6,7 +6,7 @@ export const UserProvider = (props) => {
   const [currentUser, setCurrentUser] = useState({});
   const API_URL = "http://localhost:3000/api/users";
 
-  // Existing local state update
+  
   const handleUpdateUser = (user) => {
     setCurrentUser(user);
   };

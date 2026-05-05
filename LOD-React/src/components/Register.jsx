@@ -26,7 +26,6 @@ function Register() {
 
     if (result.result === 200) {
       setStatus({ type: 'success', message: 'User created successfully! You can now log in.' });
-      // Optional: Clear form on success
       setFormData({ firstName: '', lastName: '', email: '', userName: '', userPassword: '' });
     } else {
       setStatus({ type: 'danger', message: result.message || 'Error creating user.' });

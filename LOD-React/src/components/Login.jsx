@@ -17,7 +17,7 @@ function Login() {
       return;
     }
 
-    // Call context (using userPassword to match your DB field name)
+    
     const response = await loginUser({ 
       email: userEmail, 
       userPassword: userPassword 
@@ -30,7 +30,7 @@ function Login() {
     }
   };
 
-  // Log Out View
+  
   if (currentUser?.email) return (
     <Container className="mt-5 text-center">
       <Card className="p-4 shadow-sm">

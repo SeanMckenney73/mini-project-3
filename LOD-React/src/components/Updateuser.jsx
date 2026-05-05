@@ -6,13 +6,13 @@ function UpdateProfile() {
   const { currentUser, updateDBUser, deleteDBUser } = useUserContext();
   
 
-  // Initialize state with current user values so the form isn't empty
+  
   const [formData, setFormData] = useState({
     firstName: currentUser.firstName || "",
     lastName: currentUser.lastName || "",
     userName: currentUser.userName || "",
     email: currentUser.email || "",
-    userPassword: "" // Keep password blank for security
+    userPassword: "" 
   });
 
   const [status, setStatus] = useState({ type: "", message: "" });
@@ -25,7 +25,7 @@ function UpdateProfile() {
     e.preventDefault();
     setStatus({ type: "info", message: "Updating..." });
 
-    // Call the function from Context
+    
     const result = await updateDBUser(currentUser.id, formData);
 
     if (result.success) {
@@ -45,8 +45,7 @@ function UpdateProfile() {
     
     if (result.result === 200) {
       alert("Account deleted successfully.");
-      // The page will automatically switch back to Login/Register 
-      // because deleteDBUser sets currentUser to {}
+
     } else {
       alert("Error deleting account: " + result.message);
     }

@@ -8,7 +8,7 @@ require("dotenv").config();
 
 let dbConnect = require("./dbConnect");
 
-// parse requests of content-type - application/json
+
 app.use(cors({
     origin: 'http://localhost:5173'
 }))
